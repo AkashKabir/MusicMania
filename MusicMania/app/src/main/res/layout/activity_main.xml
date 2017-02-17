@@ -26,8 +26,8 @@
         android:padding="3dp"
         android:layout_margin="3dp">
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:src="@drawable/blackswan"
         android:layout_below="@+id/text"
         android:id="@+id/image"
