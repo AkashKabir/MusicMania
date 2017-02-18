@@ -1,4 +1,4 @@
-package com.akitsme.musicmania;
+package com.akitsme.musicmania.helper;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
