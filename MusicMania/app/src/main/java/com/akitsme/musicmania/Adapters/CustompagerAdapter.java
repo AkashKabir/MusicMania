@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.akitsme.musicmania.Fragments.Artist_fragment;
 import com.akitsme.musicmania.Fragments.Mainpage_fragment;
 import com.akitsme.musicmania.Fragments.SecondPage_Fragment;
 
@@ -22,7 +23,7 @@ public class CustompagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch(position){
             case 0: return new Mainpage_fragment();
-            case 1: return new SecondPage_Fragment();
+            case 1: return new Artist_fragment();
             case 2: return new Mainpage_fragment();
             case 3: return new Mainpage_fragment();
             case 4: return new Mainpage_fragment();

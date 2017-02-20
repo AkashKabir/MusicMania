@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         PagerSlidingTabStrip tabsStrip = (PagerSlidingTabStrip) findViewById(R.id.tabs);
         tabsStrip.setViewPager(pager);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
 
        /*mRequestQueue=VolleySingleton.getInstance().getmRequestQueue();
         request=new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
