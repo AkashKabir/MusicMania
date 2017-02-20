@@ -1,4 +1,4 @@
-package com.akitsme.musicmania;
+package com.akitsme.musicmania.Model;
 
 /**
  * Created by AKASH on 19-02-2017.

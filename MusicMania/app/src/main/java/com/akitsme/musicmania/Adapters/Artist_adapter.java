@@ -1,5 +1,6 @@
 package com.akitsme.musicmania.Adapters;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,9 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.akitsme.musicmania.Artist_data;
+import com.akitsme.musicmania.Model.Artist_data;
 import com.akitsme.musicmania.R;
 import com.akitsme.musicmania.helper.DownloadImageTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -18,10 +20,11 @@ import java.util.ArrayList;
  */
 
 public class Artist_adapter extends RecyclerView.Adapter<Artist_adapter.myHolder>{
-
+    public Context mcontext;
     private ArrayList<Artist_data> arrayList=new ArrayList<>();
-    public Artist_adapter(ArrayList<Artist_data> arrayList){
+    public Artist_adapter(Context context,ArrayList<Artist_data> arrayList){
         this.arrayList=arrayList;
+        this.mcontext=context;
     }
 
 
@@ -33,8 +36,9 @@ public class Artist_adapter extends RecyclerView.Adapter<Artist_adapter.myHolder
 
     @Override
     public void onBindViewHolder(myHolder holder, int position) {
-        DownloadImageTask runner=new DownloadImageTask(holder.imageView);
-        runner.execute(arrayList.get(position).getmArtist_Image_link());
+        //DownloadImageTask runner=new DownloadImageTask(holder.imageView);
+        //runner.execute(arrayList.get(position).getmArtist_Image_link());
+        Picasso.with(mcontext).load(arrayList.get(position).getmArtist_Image_link()).into(holder.imageView);
         holder.textView.setText(arrayList.get(position).getmArtist_name());
     }
 
@@ -43,7 +47,7 @@ public class Artist_adapter extends RecyclerView.Adapter<Artist_adapter.myHolder
         return arrayList.size();
     }
 
-    public static class myHolder extends RecyclerView.ViewHolder{
+    public class myHolder extends RecyclerView.ViewHolder{
         ImageView imageView;
         TextView textView;
         public myHolder(View itemView) {

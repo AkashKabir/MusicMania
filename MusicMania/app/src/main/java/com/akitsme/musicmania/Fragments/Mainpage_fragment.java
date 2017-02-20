@@ -47,7 +47,7 @@ public class Mainpage_fragment extends Fragment{
     public static String url="http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=adele&api_key=e14851321e364fcb987a2028b13e4d7f&format=json";
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        rootView=inflater.inflate(R.layout.fragment_mainpage,container,false);
+        rootView=inflater.inflate(R.layout.activity_main,container,false);
         mActivity=this.getActivity();
         mbutton=(Button)rootView.findViewById(R.id.button);
         mRequestQueue= VolleySingleton.getInstance().getmRequestQueue();
@@ -88,22 +88,15 @@ public class Mainpage_fragment extends Fragment{
                             "Error: " + e.getMessage(),
                             Toast.LENGTH_LONG).show();
                 }
-                //Toast.makeText(mActivity,name,Toast.LENGTH_LONG).show();
             }
         },new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(mActivity,"No Internet Connection",Toast.LENGTH_LONG).show();
+                Toast.makeText(mActivity,"Free",Toast.LENGTH_LONG).show();
             }
         });//end of onresponse method
 
-        //click listener for button click
-        mbutton.setOnClickListener(new View.OnClickListener(){
-                public void onClick(View v) {
-                    mRequestQueue.add(request);
-                }
-        }
-        );
+
         return rootView;
     }
 }

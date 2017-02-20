@@ -46,7 +46,7 @@ public class SecondPage_Fragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.fragment_secondpage,container,false);
+        view=inflater.inflate(R.layout.activity_main,container,false);
 
         mActivity=this.getActivity();
         mbutton=(Button)view.findViewById(R.id.button);
@@ -92,7 +92,7 @@ public class SecondPage_Fragment extends Fragment{
         },new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(mActivity,"No Internet Connection",Toast.LENGTH_LONG).show();
+                Toast.makeText(mActivity,"Free",Toast.LENGTH_LONG).show();
             }
         });//end of onresponse method
 
