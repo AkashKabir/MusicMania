@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/artistImage"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:src="@drawable/civilwar"
+        app:civ_border_color="#ffffff"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/artistName"
+        android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="monospace"
+            android:text="Blackswan"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toRightOf="@+id/artistImage"
+            android:layout_toEndOf="@+id/artistImage" />
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_height="0.3dp"
+        android:background="#e2e9bf"
+        android:layout_alignStart="@+id/artistName"
+        android:layout_alignLeft="@+id/artistName"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
